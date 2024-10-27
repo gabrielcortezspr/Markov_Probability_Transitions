@@ -1,32 +1,32 @@
-# Markov Chain Probability Transition Simulation
+# Markov Chain Simulations
 
-This repository contains three different C/C++ programs, each demonstrating different implementations of probability-based transitions using Markov Chains. The primary focus is on simulating random events and color transitions based on probabilistic rules.
+This project contains three different C/C++ programs that simulate transitions between states using Markov Chains and pseudo-random number generation.
 
-## Content
-- **first_code.c**: A program that simulates states of luck using a Markov Chain transition matrix.
-- **second_code.c**: Another simulation using Markov Chains, incorporating randomness with a Multiplicative Linear Congruential Generator (MLCG) to simulate states of fortune.
-- **third_code.cpp**: A program that transitions between primary and complementary colors based on probabilities using a custom MLCG.
+## 1. first_code.c (Markov Chain Elemental Transitions)
+This program simulates transitions between different elements based on their nurturing and destructive relationships, inspired by the classical elements like Fire, Earth, Water, etc. The transition is guided by a Multiplicative Linear Congruential Generator (MLCG) to make random choices.
 
-### Markov Chains in Programming
-Markov Chains are mathematical systems that undergo transitions from one state to another, with each state depending only on the previous state and a set of probabilities. In programming, Markov Chains are used to model randomness, simulations, and even AI algorithms.
+### Key Concepts:
+- Simulates how elements like Fire, Water, Earth interact by nurturing or destroying each other.
+- Uses MLCG to randomly decide between nurturing or destructive actions.
 
-### Explanation of the Codes:
+## 2. second_code.c (Markov Chain Luck Simulation)
+This program models the transition between different states of luck (from bad luck to good luck) using a transition matrix and MLCG for randomness. Each state has a probability of transitioning to another, controlled by a predefined probability matrix.
 
-#### 1. **first_code.c**
-This program defines five possible states:
-- **MUITO AZAR (Very Unlucky)**
-- **AZAR (Unlucky)**
-- **NEUTRO (Neutral)**
-- **SORTE (Lucky)**
-- **MUITA SORTE (Very Lucky)**
+### Key Concepts:
+- Luck is divided into five states: "Very Unlucky", "Unlucky", "Neutral", "Lucky", and "Very Lucky".
+- Uses a transition matrix to determine the probability of moving from one state to another.
+- MLCG generates random numbers to simulate transitions.
 
-The program uses a predefined probability transition matrix, where each state has specific chances of transitioning to another state. A basic random number generator from the C standard library (`rand()`) is used to decide the next state based on these probabilities.
+## 3. third_code.cpp (Primary and Complementary Color Transitions)
+This C++ program simulates color transitions based on primary and complementary colors using Markov Chains. The transitions are governed by a MLCG, which decides if the next color will be complementary or another random primary color.
 
-#### 2. **second_code.c**
-In this code, a **Multiplicative Linear Congruential Generator (MLCG)** is introduced, which generates random numbers to decide the transitions between the states of fortune. The MLCG allows for better control over randomness and avoids some limitations of the `rand()` function. The code runs a series of steps where the next state is calculated using the MLCG and the predefined transition matrix.
+### Key Concepts:
+- Handles color transitions between primary colors (Red, Yellow, Blue) and their complementary colors (Green, Purple, Orange).
+- 70% chance of transitioning to a complementary color and 30% chance of moving to a different primary color.
+- If already in a complementary color, there's a 70% chance of returning to the primary color.
 
-#### 3. **third_code.cpp**
-This program demonstrates color transitions using a probabilistic model. Primary colors (Red, Blue, Yellow) transition to their complementary colors with a 70% chance and to other primary colors with a 30% chance. It uses a custom MLCG for generating random values to drive the transitions. The program highlights how Markov Chains can be applied to systems outside of basic state transitions, like color shifts.
-
-### How to Run
-Each file can be compiled and run using GCC (for C files) or G++ (for the C++ file).
+## Project Structure
+- first_code.c: Markov Chain simulation for element transitions.
+- second_code.c: Markov Chain simulation for luck transitions.
+- third_code.cpp: Markov Chain simulation for color transitions.
+- README.md: Project overview and instructions.
