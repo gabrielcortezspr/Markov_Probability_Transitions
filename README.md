@@ -30,8 +30,3 @@ This program demonstrates color transitions using a probabilistic model. Primary
 
 ### How to Run
 Each file can be compiled and run using GCC (for C files) or G++ (for the C++ file).
-
-For `first_code.c`:
-```bash
-gcc first_code.c -o first_code
-./first_code
