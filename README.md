@@ -1,5 +1,9 @@
 # Markov Chain Simulations
 
+![C](https://img.shields.io/badge/C-99-A8B9CC?logo=c&logoColor=black)
+![C++](https://img.shields.io/badge/C%2B%2B-11-00599C?logo=cplusplus&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 Three small C/C++ programs that simulate state transitions with Markov chains, driven by a
 hand-written **Multiplicative Linear Congruential Generator (MLCG)** instead of the standard
 library's `rand()`.
@@ -18,7 +22,15 @@ gcc -Wall -o sorte     src/sorte.c     && ./sorte
 g++ -Wall -o cores     src/cores.cpp   && ./cores
 ```
 
-Each program prints the sequence of visited states (output in Portuguese).
+Each program prints the sequence of visited states (output in Portuguese), e.g. `sorte`:
+
+```
+Passo 1: NEUTRO
+Passo 2: SORTE
+Passo 3: SORTE
+Passo 4: SORTE
+Passo 5: AZAR
+```
 
 ## License
 
